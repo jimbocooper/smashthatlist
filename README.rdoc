@@ -1,4 +1,4 @@
-== SmashThatList
+= SmashThatList
 
 This is yet another task list management system:
 * It doesn't have many features.
@@ -10,6 +10,6 @@ However, if you are still reading it's for a reason, so let's see the positives:
 * It looks pretty.
 * It's good if you value your time.
 
-# What's the single, highest impact and lowest effort task you could carry on next?
+== What's the single, highest impact and lowest effort task you could carry on next?
 
-And that's it, really. The whole concept is based on the [Action Priority Matrix](http://www.timeanalyzer.com/lib/priority.htm)
+And that's it, really. The whole concept is based on the {Action Priority Matrix}[http://www.timeanalyzer.com/lib/priority.htm]
