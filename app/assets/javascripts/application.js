@@ -10,10 +10,13 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require jquery
-//= require jquery_ujs
+//= require html5shiv/dist/html5shiv.min
+//= require jquery/dist/jquery.min
+//= require jquery-ujs/src/rails
+//= require jquery-ui/ui/minified/jquery-ui.min
+//= require bootstrap/dist/js/bootstrap.min
 //= require turbolinks
 //= require flat-ui-pro
-//= require home/main.js
+//= require smashthatlist
 
 
