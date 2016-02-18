@@ -1,28 +1,15 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+SmashThatList is yet another task list management system:
+* It doesn't have many features.
+* In fact, it pretty much has a single one.
+* You can't collaborate with peers.
+* There is not an app for it yet.
 
-Things you may want to cover:
+However, if you are still reading it's for a reason, so let's see the positives:
+* It looks pretty.
+* It's good if you value your time.
 
-* Ruby version
+What's the single, highest impact and lowest effort task you could carry on next?
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+And that's it, really. The whole concept is based on the action priority matrix http://www.timeanalyzer.com/lib/priority.htm
