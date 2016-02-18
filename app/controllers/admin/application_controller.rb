@@ -9,7 +9,9 @@ module Admin
     before_filter :authenticate_admin
 
     def authenticate_admin
-      # TODO Add authentication logic here.
+      if !current_user.has_role? :admin
+        redirect_to root_path, :alert => "You are not allowed to access that area :("
+      end
     end
 
     # Override this value to specify the number of elements to display at a time

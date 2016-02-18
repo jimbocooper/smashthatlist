@@ -11,10 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160218101347) do
+ActiveRecord::Schema.define(version: 20160218103048) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "projects", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "user_id"
+    t.string   "colour"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "projects", ["user_id"], name: "index_projects_on_user_id", using: :btree
 
   create_table "roles", force: :cascade do |t|
     t.string   "name"
@@ -26,6 +36,18 @@ ActiveRecord::Schema.define(version: 20160218101347) do
 
   add_index "roles", ["name", "resource_type", "resource_id"], name: "index_roles_on_name_and_resource_type_and_resource_id", using: :btree
   add_index "roles", ["name"], name: "index_roles_on_name", using: :btree
+
+  create_table "tasks", force: :cascade do |t|
+    t.integer  "project_id"
+    t.string   "name"
+    t.text     "description"
+    t.integer  "effort_in_mins"
+    t.integer  "impact"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
+
+  add_index "tasks", ["project_id"], name: "index_tasks_on_project_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -40,6 +62,8 @@ ActiveRecord::Schema.define(version: 20160218101347) do
     t.inet     "last_sign_in_ip"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
+    t.string   "first_name"
+    t.string   "last_name"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
@@ -52,4 +76,6 @@ ActiveRecord::Schema.define(version: 20160218101347) do
 
   add_index "users_roles", ["user_id", "role_id"], name: "index_users_roles_on_user_id_and_role_id", using: :btree
 
+  add_foreign_key "projects", "users"
+  add_foreign_key "tasks", "projects"
 end

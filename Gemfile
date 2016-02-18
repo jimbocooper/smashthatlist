@@ -35,7 +35,6 @@ gem 'devise' # auth
 gem 'cancan' # permissions
 gem 'scopify' # permissions
 gem 'rolify', git: 'git://github.com/EppO/rolify.git'
-gem 'administrate'
 gem 'figaro'
 gem 'slim-rails'
 gem 'angular_rails_csrf'
@@ -43,4 +42,5 @@ gem 'ngannotate-rails'
 gem 'friendly_id'
 gem 'nokogiri'
 gem 'premailer-rails'
+gem 'administrate'
 
