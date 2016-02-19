@@ -1,2 +1,44 @@
-div class="container"
-  h3 Hi, #{current_user.first_name}!
+- if user_signed_in?
+  div class="container" ng-app="HomeApp"
+    chasing-dots-spinner ng-show="loading"
+    div ui-view=""
+
+    script type="text/ng-template" id="home.html"
+      - if user_signed_in?
+        h3 Hi, #{current_user.first_name}!
+        div ui-view=""
+      - else
+        h3 hola
+
+    script type="text/ng-template" id="projects.list.html"
+      p This is what you should be focusing on:
+      div.row
+        div.col-md-12
+          div.row
+            div.col-md-10
+              hr
+              div ng-repeat="project in projects track by project.id"
+                p.lead
+                  | {{project.name}}
+                div.well ng-repeat="task in project.tasks track by task.id"
+                  p
+                    | {{task.name}}
+                  .progress
+                     .progress-bar style=("width:60%;")
+                     .progress-bar.progress-bar-warning style=("width: 40%;")
+                  p
+                    small
+                      | High impact / Low effort
+            div.col-md-2
+              div ng-repeat="project in projects track by project.id"
+                ul.nav.nav-list.nav-list-vivid
+                  li.nav-header
+                    | {{project.name}} {{key}}
+                  li ng-repeat="task in project.tasks track by task.id"
+                    a href="#fakelink"
+                      | {{task.name}} (id {{task.id}})
+                  li.divider
+                br
+
+- else
+  p MARKETING

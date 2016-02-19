@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-    .module('ProjectsApp')
+    .module('HomeApp')
     .factory('ProjectsSrv', ProjectsSrv);
 
 function ProjectsSrv($q, $http) {
@@ -14,7 +14,7 @@ function ProjectsSrv($q, $http) {
             return $q(function(resolve, reject) {
                 $http({
                     method: 'GET',
-                    url:    '/dashboard/my_videos.json',
+                    url:    '/api/projects.json',
                     params: params
                 })
                     .then(function successCallback(response) {
@@ -31,42 +31,8 @@ function ProjectsSrv($q, $http) {
             return $q(function(resolve, reject) {
                 $http({
                     method: 'PUT',
-                    url:    '/dashboard/my_videos/batch_update.json',
+                    url:    '/api/projects.json',
                     data: {videos: params}
-                })
-                    .then(function successCallback(response) {
-                        resolve(response.data);
-                    }, function errorCallback(response) {
-                        reject(response);
-                    });
-            });
-
-        },
-
-        enable: function(params) {
-
-            return $q(function(resolve, reject) {
-                $http({
-                    method: 'GET',
-                    url:    '/dashboard/my_videos/'+params.id+'/enable.json/',
-                    data: {id: params.id}
-                })
-                    .then(function successCallback(response) {
-                        resolve(response.data);
-                    }, function errorCallback(response) {
-                        reject(response);
-                    });
-            });
-
-        },
-
-        disable: function(params) {
-
-            return $q(function(resolve, reject) {
-                $http({
-                    method: 'GET',
-                    url:    '/dashboard/my_videos/'+params.id+'/disable.json/',
-                    data: {id: params.id}
                 })
                     .then(function successCallback(response) {
                         resolve(response.data);
@@ -82,7 +48,7 @@ function ProjectsSrv($q, $http) {
             return $q(function(resolve, reject) {
                 $http({
                     method: 'POST',
-                    url:    '/dashboard/my_videos.json',
+                    url:    '/api/projects.json',
                     data: {videos: params}
                 })
                     .then(function successCallback(response) {
@@ -97,5 +63,51 @@ function ProjectsSrv($q, $http) {
     }
 
 };
+
+    angular
+        .module('HomeApp')
+        .factory('TasksSrv', TasksSrv);
+
+    function TasksSrv($q, $http) {
+
+        return {
+
+            update: function(params) {
+
+                return $q(function(resolve, reject) {
+                    $http({
+                        method: 'PUT',
+                        url:    '/api/tasks.json',
+                        data: {videos: params}
+                    })
+                        .then(function successCallback(response) {
+                            resolve(response.data);
+                        }, function errorCallback(response) {
+                            reject(response);
+                        });
+                });
+
+            },
+
+            create: function(params) {
+
+                return $q(function(resolve, reject) {
+                    $http({
+                        method: 'POST',
+                        url:    '/api/tasks.json',
+                        data: {videos: params}
+                    })
+                        .then(function successCallback(response) {
+                            resolve(response.data);
+                        }, function errorCallback(response) {
+                            reject(response);
+                        });
+                });
+
+            }
+
+        }
+
+    };
 
 })();

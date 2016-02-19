@@ -9,12 +9,14 @@ Rails.application.routes.draw do
 
   devise_for :users
 
+  scope '/api' do
+    resources :projects
+    resources :tasks
+  end
+
   root 'home#index'
-
+  get ':url' => 'home#index'
   get 'tests' => 'home#tests'
-
-  resources :projects
-  resources :tasks
 
   # Example resource route with options:
   #   resources :products do

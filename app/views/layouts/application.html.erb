@@ -4,13 +4,23 @@
   <title>Smashthatlist</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <base href="/">
 </head>
-<body class="<%= controller_name %> <%= action_name %>" >
+<body class="<%= controller_name %> <%= action_name %>">
 <%= render 'shared/navbar' %>
+<div style="margin-top: 53px">
+<% flash.each do |name, msg| %>
+    <% if msg.is_a?(String) %>
+        <div class="dialog dialog-<%= name == "notice" ? "default" : "danger" %>">
+          <div class="container">
+            <%= content_tag :div, msg, :id => "flash_#{name}" %>
+          </div>
+        </div>
+    <% end %>
+<% end %>
 <div class="container">
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
 <%= yield %>
+</div>
 </div>
 </body>
 <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
