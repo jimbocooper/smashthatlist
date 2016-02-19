@@ -12,5 +12,6 @@
  *
  *= require bootstrap/dist/css/bootstrap
  *= require flat-ui-pro
+ *= require angular-spinkit/build/angular-spinkit.min
  *= require_self
  */

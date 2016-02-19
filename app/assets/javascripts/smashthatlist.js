@@ -1,1 +1,1 @@
-//= require home/main
+//= require ./home/main

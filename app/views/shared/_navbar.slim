@@ -1,0 +1,24 @@
+nav.navbar.navbar-inverse.navbar-fixed-top role="navigation"
+  div.container-fluid
+    .navbar-header
+      button.navbar-toggle data-target="#navbar-collapse-01" data-toggle="collapse" type="button"
+        span.sr-only Toggle navigation
+      a.navbar-brand href="#"  SmashThatList
+    #navbar-collapse-01.collapse.navbar-collapse
+      ul.nav.navbar-nav
+        li.active
+          a href="#fakelink"  Projects
+        li
+          a href="#fakelink"  Tasks
+      ul.nav.navbar-nav.navbar-right
+        - if user_signed_in?
+          - if current_user.has_role? :admin
+            li
+              = link_to "Admin", admin_root_path
+          li
+            = link_to('<i class="fa fa-power-off"></i> Logout'.html_safe, destroy_user_session_path, :method => :delete)
+        - else
+          li
+            = link_to "Log in", new_session_path(resource_name)
+    /! /.navbar-collapse
+  /! /navbar

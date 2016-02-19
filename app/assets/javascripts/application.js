@@ -18,5 +18,6 @@
 //= require turbolinks
 //= require flat-ui-pro
 //= require smashthatlist
-
+//= require angular/angular.min
+//= require angular/smashthatlist.app
 
