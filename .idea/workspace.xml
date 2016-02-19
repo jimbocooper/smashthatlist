@@ -2,21 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6128e67c-7f0a-450c-ae87-bd9d178c9605" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/angular/components/home/controllers.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/angular/components/home/routes.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/javascripts/angular/components/projects/main.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/angular/components/home/main.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/javascripts/angular/components/projects/services.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/angular/components/home/services.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/angular/smashthatlist.app.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/angular/smashthatlist.app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/projects_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/projects_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/project.rb" afterPath="$PROJECT_DIR$/app/models/project.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/user.rb" afterPath="$PROJECT_DIR$/app/models/user.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/index.slim" afterPath="$PROJECT_DIR$/app/views/home/index.slim" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/shared/_navbar.slim" afterPath="$PROJECT_DIR$/app/views/shared/_navbar.slim" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20160218102834_create_projects.rb" afterPath="$PROJECT_DIR$/db/migrate/20160218102834_create_projects.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20160218102917_create_tasks.rb" afterPath="$PROJECT_DIR$/db/migrate/20160218102917_create_tasks.rb" />
     </list>
     <ignored path="smashthelist.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -119,8 +105,8 @@
       <file leaf-file-name="index.slim" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/home/index.slim">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.45866364">
-              <caret line="27" column="72" selection-start-line="27" selection-start-column="72" selection-end-line="27" selection-end-column="72" />
+            <state vertical-scroll-proportion="0.6432616">
+              <caret line="42" column="19" selection-start-line="42" selection-start-column="19" selection-end-line="42" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -1148,8 +1134,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/home/index.slim">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45866364">
-          <caret line="27" column="72" selection-start-line="27" selection-start-column="72" selection-end-line="27" selection-end-column="72" />
+        <state vertical-scroll-proportion="0.6432616">
+          <caret line="42" column="19" selection-start-line="42" selection-start-column="19" selection-end-line="42" selection-end-column="19" />
           <folding />
         </state>
       </provider>

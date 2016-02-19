@@ -23,7 +23,7 @@
                 div.well ng-repeat="task in project.tasks track by task.id"
                   p
                     | {{task.name}}
-                  .progress
+                  div.progress
                      .progress-bar style=("width:60%;")
                      .progress-bar.progress-bar-warning style=("width: 40%;")
                   p
@@ -39,6 +39,24 @@
                       | {{task.name}} (id {{task.id}})
                   li.divider
                 br
+      div.row
+        h4 Examples
+        p 5 min effort, high impact
+        div.progress
+          .progress-bar style=("width:90%;")
+          .progress-bar.progress-bar-warning style=("width: 10%;")
+        p 50 min effort, high impact
+        div.progress
+          .progress-bar style=("width:60%;")
+          .progress-bar.progress-bar-warning style=("width: 40%;")
+        p 5 min effort, low impact
+        div.progress
+          .progress-bar style=("width:60%;")
+          .progress-bar.progress-bar-warning style=("width: 40%;")
+        p 15 min effort, med impact
+        div.progress
+          .progress-bar style=("width:60%;")
+          .progress-bar.progress-bar-warning style=("width: 40%;")
 
 - else
   p MARKETING
